@@ -1,10 +1,11 @@
+import java.util.Arrays;
+
 public class Employee {
 
     private final String fio;
     private int department;
     private double salary;
     private int id;
-
 
     public Employee(String fio, int department, double salary) {
         getId();

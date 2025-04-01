@@ -20,10 +20,10 @@ public class Main {
 
     public static void addEmployee(String fio, int department, double salary) {
 
-        if (Employee.getCount() >= employees.length) {
+        if (Employee.getCount() > employees.length) {
             System.out.println("No more places");
         } else {
-            employees[Employee.getCount() - 1] = new Employee(fio, department, salary);;
+            employees[Employee.getCount() - 1] = new Employee(fio, department, salary);
         }
     }
 
