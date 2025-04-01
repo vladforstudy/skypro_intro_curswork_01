@@ -5,17 +5,12 @@ public class Employee {
     private double salary;
     private int id;
 
+
     public Employee(String fio, int department, double salary) {
         getId();
         this.fio = fio;
         this.department = department;
         this.salary = salary;
-    }
-
-    static int count;
-
-    public static int getCount() {
-        return count;
     }
 
     public String getFio() {
@@ -28,6 +23,12 @@ public class Employee {
 
     public double getSalary() {
         return salary;
+    }
+
+    static int count = 1;
+
+    public static int getCount() {
+        return count;
     }
 
     public int getId() {
@@ -46,11 +47,9 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "id: " + id +
-                ", fio: " + fio +
-                ", department: " + department +
-                ", salary: " + salary + " р." +
-                '}';
+        return  "id: " + id +
+                ", ФИО: " + fio +
+                ", отдел: " + department +
+                ", ЗП: " + salary + " р.";
     }
 }

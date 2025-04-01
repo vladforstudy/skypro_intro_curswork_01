@@ -11,7 +11,7 @@ public class Main {
         addEmployee("Novaya", 5, 12000);
 
         printFullInformation();
-        System.out.println(salaryCosts());
+        System.out.println("Сумма затрат на зарплаты в месяц: " + salaryCosts() + " р.");
         minSalaryEmployee();
         maxSalaryEmployee();
         averageSalaryCosts();
@@ -23,7 +23,7 @@ public class Main {
         if (Employee.getCount() >= employees.length) {
             System.out.println("No more places");
         } else {
-            employees[Employee.getCount()] = new Employee(fio, department, salary);;
+            employees[Employee.getCount() - 1] = new Employee(fio, department, salary);;
         }
     }
 
@@ -56,7 +56,7 @@ public class Main {
                 }
             }
         }
-        System.out.println(minSalaryEmployee.getFio());
+        System.out.println("Минимальная зарплата: " + minSalaryEmployee.getFio() + " р.");
     }
 
     public static void maxSalaryEmployee() {
@@ -69,12 +69,12 @@ public class Main {
                 }
             }
         }
-        System.out.println(maxSalaryEmployee.getFio());
+        System.out.println("Максимальная зарплата: " + maxSalaryEmployee.getFio() + " р.");
     }
 
     public static void averageSalaryCosts() {
 
-        System.out.println(salaryCosts() / Employee.getCount());
+        System.out.println("Среднее значение зарплат: " + salaryCosts() / (Employee.getCount() - 1) + " р.");
     }
 
     public static void allEmployeesFio() {
@@ -82,7 +82,6 @@ public class Main {
             if (employee != null) {
                 System.out.println(employee.getFio());
             }
-
         }
     }
 }
