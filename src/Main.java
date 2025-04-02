@@ -4,11 +4,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        addEmployee("Ivanov", 1, 5000);
-        addEmployee("Petrov", 2, 3000);
-        addEmployee("Sidorov", 3, 8000);
-        addEmployee("Malen'kiy", 4, 4000);
-        addEmployee("Novaya", 5, 12000);
+        addEmployee("Ivanov I.I.", 1, 5000);
+        addEmployee("Petrov P.P.", 2, 3000);
+        addEmployee("Sidorov S.S.", 3, 8000);
+        addEmployee("Malen'kiy M.M.", 4, 4000);
+        addEmployee("Novaya N.N.", 5, 12000);
 
         printFullInformation();
         System.out.println("Сумма затрат на зарплаты в месяц: " + salaryCosts() + " р.");
@@ -41,7 +41,6 @@ public class Main {
             if (employee != null) {
                 sum += employee.getSalary();
             }
-
         }
          return sum;
     }
