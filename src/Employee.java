@@ -8,7 +8,7 @@ public class Employee {
     private int id;
 
     public Employee(String fio, int department, double salary) {
-        getId();
+        id();
         this.fio = fio;
         this.department = department;
         this.salary = salary;
@@ -32,9 +32,13 @@ public class Employee {
         return count;
     }
 
-    public int getId() {
+    public int id() {
         this.id = count;
         count++;
+        return id;
+    }
+
+    public int getId() {
         return id;
     }
 
