@@ -12,22 +12,16 @@ public class EmployeeBook {
         }
     }
 
-    public void addEmployee(String fio, int department, double salary) {
-
-        boolean flag = false;
+    public boolean addNewEmployee(String fio, int department, double salary) {
 
         for (int i = 0; i < size; i++) {
             if (employees[i] == null) {
                 employees[i] = new Employee(fio, department, salary);
-                flag = true;
-                System.out.println("Employee " + fio + " is added");
-                break;
+                return true;
             }
         }
 
-        if (!flag) {
-            System.out.println("No more places");
-        }
+        return false;
     }
 
     public Employee getById(int id) {
@@ -44,14 +38,14 @@ public class EmployeeBook {
     }
 
 
-//    void addEmployee(String fio, int department, double salary) {
-//
-//        if (Employee.getCount() > employees.length) {
-//            System.out.println("No more places");
-//        } else {
-//            employees[Employee.getCount() - 1] = new Employee(fio, department, salary);
-//        }
-//    }
+    void addEmployee(String fio, int department, double salary) {
+
+        if (Employee.getCount() > employees.length) {
+            System.out.println("No more places");
+        } else {
+            employees[Employee.getCount() - 1] = new Employee(fio, department, salary);
+        }
+    }
 
     public void printFullInformation() {
         for (Employee employee : employees) {

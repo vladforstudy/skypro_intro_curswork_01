@@ -38,8 +38,13 @@ public class Main {
         employeeBook.salaryLessThenNumber(comparisonNumber);
         employeeBook.salaryMoreThenNumber(comparisonNumber);
         employeeBook.deleteEmployeeById(2);
-        employeeBook.addEmployee("Kapustin K.K.", 2, 3800);
-        employeeBook.printFullInformation();
+
+        if (employeeBook.addNewEmployee("Kapustin K.K.", 2, 3800)) {
+            System.out.println("New employee added");
+        } else {
+            System.out.println("No more places");
+        }
+
         System.out.println(employeeBook.getById(6));
     }
 }
