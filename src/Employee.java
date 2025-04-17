@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Employee {
 
     private final String fio;
@@ -8,7 +6,7 @@ public class Employee {
     private int id;
 
     public Employee(String fio, int department, double salary) {
-        id();
+        this.id = createId();
         this.fio = fio;
         this.department = department;
         this.salary = salary;
@@ -32,7 +30,7 @@ public class Employee {
         return count;
     }
 
-    public int id() {
+    public int createId() {
         this.id = count;
         count++;
         return id;
