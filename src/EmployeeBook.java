@@ -47,8 +47,6 @@ public class EmployeeBook {
     // получение сотрудника по id
     public Employee getById(int id) {
 
-        Employee empl = null;
-
         for (Employee employee : employees) {
             if (employee.getId() == id) {
                 return employee;
