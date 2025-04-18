@@ -51,11 +51,10 @@ public class EmployeeBook {
 
         for (Employee employee : employees) {
             if (employee.getId() == id) {
-                empl = employee;
-                break;
+                return employee;
             }
         }
-        return empl;
+        return null;
     }
 
     // по идее с появлением addNewEmployee() становится не реликтом
