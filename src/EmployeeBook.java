@@ -57,7 +57,7 @@ public class EmployeeBook {
         return null;
     }
 
-    // по идее с появлением addNewEmployee() становится не реликтом
+    // по идее с появлением addNewEmployee() становится реликтом
 //    public void addEmployee(String fio, int department, double salary) {
 //
 //        if (Employee.getCount() > employees.length) {
